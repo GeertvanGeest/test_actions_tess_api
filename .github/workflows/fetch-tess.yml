@@ -1,0 +1,19 @@
+name: Fetch TESS Materials
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch-materials:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Fetch TESS materials
+        run: python scripts/fetch_tess_materials.py
+
