@@ -1,7 +1,11 @@
 name: Fetch TESS Materials
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
+  
 
 jobs:
   fetch-materials:
