@@ -14,6 +14,9 @@ jobs:
         with:
           python-version: '3.11'
       
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
       - name: Fetch TESS materials
         run: python scripts/fetch_tess_materials.py
 
