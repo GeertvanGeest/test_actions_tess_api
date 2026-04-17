@@ -23,3 +23,10 @@ jobs:
       - name: Fetch TESS materials
         run: python scripts/fetch_tess_materials.py
 
+      - name: Upload response artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tess-response
+          path: output/
+
