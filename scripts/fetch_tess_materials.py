@@ -12,5 +12,5 @@ try:
     print("Successfully parsed JSON")
 except requests.exceptions.JSONDecodeError as e:
     print(f"Error: Failed to parse JSON - {e}")
-    print(f"Response: {response.text[:200]}")
+    print(f"Response: {response.text[:1000]}")
     sys.exit(1)
